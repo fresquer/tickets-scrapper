@@ -19,5 +19,6 @@ async function runScrapper() {
 
 
 export default async function handler(req, res) {
-    runScrapper();
+    // runScrapper();
+    console.log('test');
 }
