@@ -3,9 +3,13 @@ const chromium = require('chrome-aws-lambda');
 
 async function runScrap() {
     const browser = await chromium.puppeteer.launch({
-        headless: true,
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath,
+        headless: chromium.headless,
         ignoreHTTPSErrors: true,
     })
+
     let page = await browser.newPage();
     await page.goto(urlToScrap, {
         waitUntil: 'domcontentloaded',
