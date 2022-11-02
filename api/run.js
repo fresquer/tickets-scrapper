@@ -21,4 +21,6 @@ async function runScrapper() {
 export default async function handler(req, res) {
     // runScrapper();
     console.log('test');
+    res.statusCode = 200;
+    res.json({ message: 'It works' });
 }
