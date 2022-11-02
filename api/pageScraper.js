@@ -1,8 +1,8 @@
 const urlToScrap = process.env.URL;
-const puppeteer = require('puppeteer')
+const chromium = require('chrome-aws-lambda');
 
 async function runScrap() {
-    const browser = await puppeteer.launch({
+    const browser = await chromium.puppeteer.launch({
         headless: true,
         ignoreHTTPSErrors: true,
     })
