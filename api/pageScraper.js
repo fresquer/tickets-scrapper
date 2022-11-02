@@ -8,6 +8,7 @@ async function runScrap() {
         executablePath: await chromium.executablePath,
         headless: chromium.headless,
         ignoreHTTPSErrors: true,
+        ignoreDefaultArgs: ['--disable-extensions']
     })
 
     let page = await browser.newPage();
