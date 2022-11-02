@@ -19,8 +19,7 @@ async function runScrapper() {
 
 
 export default async function handler(req, res) {
-    // runScrapper();
-    console.log('test');
+    await runScrapper();
     res.statusCode = 200;
-    res.json({ message: 'It works' });
+    res.json({ message: 'works' });
 }
